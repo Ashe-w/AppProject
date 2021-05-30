@@ -8,4 +8,22 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="Lavender">#8c00ff</color>
+    <color name="Pastel1">#fbfcc2</color>
+    <color name="Pastel2">#e3c2fc</color>
+    <color name="Pastel3">#c2fcf4</color>
+    <color name="Pastel4">#c2d4fc</color>
+    <color name="Pastel5">#f9c2fc</color>
+    <color name="BackgroundGray">#cce4ed</color>
+    <color name="BackgroundLight">#f0f2fc</color>
+    <color name="BackgroundPeach">#f0efe4</color>
+    <color name="buttonBlueL">#67a9eb</color>
+    <color name="buttonBlueD">#3b6dd9</color>
+    <color name="buttonGreenB">#58dce0</color>
+    <color name="buttonBlueP">#9358e0</color>
+    <color name="buttonGreen">#5be3b1</color>
+    <color name="borderDark">#1d0a66</color>
+    <color name="borderBlack">#000126</color>
+    <color name="borderGray">#a5b2b8</color>
+    <color name="textDark">#040024</color>
+    <color name="textLight">#fbfcf0</color>
 </resources>

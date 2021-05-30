@@ -6,30 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.AppProject.AppBarOverlay">
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <include
         layout="@layout/content_main"
-        android:background="#4C6BA8" />
+        android:background="@color/BackgroundGray" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:text="TextView" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/buttonBlueD"
         app:popupTheme="@style/Theme.AppProject.PopupOverlay" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
