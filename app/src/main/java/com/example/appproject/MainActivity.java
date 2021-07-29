@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
 //
 //        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_container,new FirstFragment(),"First Fragment").commit();
+//
+//        getSupportFragmentManager().beginTransaction().replace(R.id.main_container,new FirstFragment(),"First Fragment").commit();
     }
 
     @Override
