@@ -20,4 +20,5 @@
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
 
+
 </navigation>
