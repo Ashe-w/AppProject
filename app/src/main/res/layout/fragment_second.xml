@@ -26,10 +26,12 @@
             android:text="Activity Name" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/activityInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/activityNameInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/BackgroundLight" />
@@ -96,10 +98,11 @@
             android:layout_height="108dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TestInput"
                 android:layout_width="match_parent"
                 android:layout_height="136dp"
-                android:background="@color/BackgroundLight" />
-
+                android:background="@color/BackgroundLight"
+                android:hint="TestInput"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -20,7 +21,27 @@ public class SecondFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        View second = inflater.inflate(R.layout.fragment_second, container, false);
+        Button save = second.findViewById(R.id.button_second);
+
+        //edit texts
+        EditText activityName = (EditText)second.findViewById(R.id.activityNameInput);
+        EditText textInput = (EditText)second.findViewById(R.id.TestInput);
+        EditText thetime = (EditText)second.findViewById(R.id.editTextTime);
+        save.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                String text = activityName.getText().toString();
+                String desc = textInput.getText().toString();
+                int t = Integer.parseInt(thetime.getText().toString());
+                Global.activityNames.add(text);
+                Global.descriptions.add(desc);
+                Global.times.add(t);
+                NavHostFragment.findNavController(SecondFragment.this)
+                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
+            }
+        });
+        return second;
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -34,5 +55,6 @@ public class SecondFragment extends Fragment {
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }
         });
+
     }
 }

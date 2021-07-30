@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 public class FirstFragment extends Fragment {
 
-    ArrayList<String> arrayList=new ArrayList<>();
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -32,13 +32,11 @@ public class FirstFragment extends Fragment {
         View firstLayOut = inflater.inflate(R.layout.fragment_first, container, false);
         ListView listView=firstLayOut.findViewById(R.id.listview);
 
-        arrayList.add("apple");
-        arrayList.add("banana");
-        arrayList.add("cat");
-        arrayList.add("dog");
-        ArrayAdapter adapter1=new ArrayAdapter(firstLayOut.getContext(),android.R.layout.simple_list_item_1,arrayList);
 
-        listView.setAdapter(adapter1);
+
+        ArrayAdapter adapter1=new ArrayAdapter(firstLayOut.getContext(),android.R.layout.simple_list_item_1,Global.activityNames);
+        MyListAdapter adapter=new MyListAdapter(this.getActivity(), Global.activityNames, Global.descriptions,Global.times);
+        listView.setAdapter(adapter);
 
 
         return firstLayOut;
@@ -52,7 +50,6 @@ public class FirstFragment extends Fragment {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                arrayList.add("n");
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
