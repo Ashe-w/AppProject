@@ -23,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/Pastel4"
+            android:textColor="@color/buttonBlueP"
             android:text="Activity Name" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -41,8 +42,9 @@
             android:id="@+id/activityTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/buttonBlueP"
             android:background="@color/Pastel4"
-            android:text="Activity Time" />
+            android:text="Activity Time (in minutes)" />
 
         <EditText
             android:id="@+id/editTextTime"
@@ -57,7 +59,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/Pastel4"
-            android:text="TextView" />
+            android:textColor="@color/buttonBlueP"
+            android:text="Select Options" />
 
         <com.google.android.material.chip.ChipGroup
             android:layout_width="match_parent"
@@ -69,6 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/buttonBlueL"
+                android:textColor="@color/BackgroundLight"
                 android:text="ToggleButton" />
 
             <ToggleButton
@@ -76,6 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/buttonBlueL"
+                android:textColor="@color/BackgroundLight"
                 android:text="ToggleButton" />
 
             <ToggleButton
@@ -83,6 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/buttonBlueL"
+                android:textColor="@color/BackgroundLight"
                 android:text="ToggleButton" />
         </com.google.android.material.chip.ChipGroup>
 
@@ -91,7 +97,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/Pastel4"
-            android:text="TextView" />
+            android:text="Activity Description"
+            android:textColor="@color/buttonBlueP" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -102,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="136dp"
                 android:background="@color/BackgroundLight"
-                android:hint="TestInput"/>
+                android:hint="Add a quick description"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
@@ -111,7 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="128dp"
-        android:text="@string/previous"
+        android:text="save"
         app:backgroundTint="@color/buttonBlueP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,7 +130,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:src="@drawable/abc_vector_test"
-        app:backgroundTint="@color/buttonGreenB"
+        app:backgroundTint="@color/Pastel4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.109"
@@ -135,12 +142,15 @@
         android:id="@+id/textView2"
         android:layout_width="279dp"
         android:layout_height="56dp"
-        android:text="TextView"
+        android:fontFamily="@font/acme"
+        android:text="New Activity"
+        android:textColor="@color/buttonGreen"
+        android:textSize="34dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.232"
         app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194" />
+        app:layout_constraintVertical_bias="0.208" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

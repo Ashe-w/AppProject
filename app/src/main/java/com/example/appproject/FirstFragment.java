@@ -35,7 +35,7 @@ public class FirstFragment extends Fragment {
 
 
         ArrayAdapter adapter1=new ArrayAdapter(firstLayOut.getContext(),android.R.layout.simple_list_item_1,Global.activityNames);
-        MyListAdapter adapter=new MyListAdapter(this.getActivity(), Global.activityNames, Global.descriptions,Global.times);
+        MyListAdapter adapter=new MyListAdapter(this.getActivity(), Global.activityNames, Global.descriptions,Global.times,Global.counting,Global.paused);
         listView.setAdapter(adapter);
 
 

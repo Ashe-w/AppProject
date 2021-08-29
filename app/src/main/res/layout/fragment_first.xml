@@ -7,10 +7,32 @@
     android:background="@color/BackgroundLight"
     tools:context=".MainActivity">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Pastel4"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/acme"
+        android:gravity="center_horizontal"
+        android:text="Your Activities"
+        android:textColor="@color/borderDark"
+        android:textSize="34sp" />
+
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="677dp"
+        android:layout_below="@+id/toolbar2"
+        android:layout_marginTop="-2dp">
 
     </ListView>
 
@@ -28,7 +50,7 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="To frag2"
+            android:text="Add Activity"
             app:backgroundTint="@color/buttonBlueL" />
     </androidx.appcompat.widget.Toolbar>
 

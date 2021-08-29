@@ -1,10 +1,12 @@
 package com.example.appproject;
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -37,6 +39,12 @@ public class SecondFragment extends Fragment {
                 Global.activityNames.add(text);
                 Global.descriptions.add(desc);
                 Global.times.add(t);
+                Global.paused.add(Boolean.FALSE);
+                Global.counting.add(Boolean.FALSE);
+                Global.pauseOffset.add((long)0);
+                Chronometer showTime = null;
+                Global.chronos.add(showTime);
+                Global.savedTime.add(SystemClock.elapsedRealtime());
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }
