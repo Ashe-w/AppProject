@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:fontFamily="@font/acme"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center_horizontal"
         android:text="Your Activities"
         android:textColor="@color/borderDark"
@@ -52,7 +52,16 @@
             android:layout_height="wrap_content"
             android:text="Add Activity"
             app:backgroundTint="@color/buttonBlueL" />
+        <Button
+            android:id="@+id/clearActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear Activity"
+            android:layout_marginLeft="20dp"
+            app:backgroundTint="@color/buttonBlueL" />
     </androidx.appcompat.widget.Toolbar>
+
+
 
 
 </RelativeLayout>

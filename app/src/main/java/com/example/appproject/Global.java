@@ -13,4 +13,5 @@ public class Global {
     public static ArrayList<Long> pauseOffset = new ArrayList<>();
     public static ArrayList<Chronometer> chronos = new ArrayList<>();
     public static ArrayList<Long> savedTime = new ArrayList<>();
+    public static ArrayList<Boolean> done =  new ArrayList<>();
 }

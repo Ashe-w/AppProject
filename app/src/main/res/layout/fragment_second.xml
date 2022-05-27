@@ -23,8 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/Pastel4"
-            android:textColor="@color/buttonBlueP"
-            android:text="Activity Name" />
+            android:text="Activity Name"
+            android:textColor="@color/borderDark" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/activityInputLayout"
@@ -34,6 +34,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/activityNameInput"
                 android:layout_width="match_parent"
+                android:textColor="@color/borderDark"
                 android:layout_height="wrap_content"
                 android:background="@color/BackgroundLight" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -42,15 +43,16 @@
             android:id="@+id/activityTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/buttonBlueP"
             android:background="@color/Pastel4"
-            android:text="Activity Time (in minutes)" />
+            android:text="Activity Time (in minutes)"
+            android:textColor="@color/borderDark" />
 
         <EditText
             android:id="@+id/editTextTime"
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:background="@color/BackgroundLight"
+            android:textColor="@color/borderDark"
             android:ems="10"
             android:inputType="time" />
 
@@ -59,8 +61,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/Pastel4"
-            android:textColor="@color/buttonBlueP"
-            android:text="Select Options" />
+            android:text="Select Options"
+            android:textColor="@color/borderDark" />
 
         <com.google.android.material.chip.ChipGroup
             android:layout_width="match_parent"
@@ -98,7 +100,7 @@
             android:layout_height="wrap_content"
             android:background="@color/Pastel4"
             android:text="Activity Description"
-            android:textColor="@color/buttonBlueP" />
+            android:textColor="@color/borderDark" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -109,7 +111,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="136dp"
                 android:background="@color/BackgroundLight"
-                android:hint="Add a quick description"/>
+                android:hint="Add a quick description"
+                android:textColor="@color/borderDark" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
@@ -144,7 +147,7 @@
         android:layout_height="56dp"
         android:fontFamily="@font/acme"
         android:text="New Activity"
-        android:textColor="@color/buttonGreen"
+        android:textColor="@color/buttonBlueP"
         android:textSize="34dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

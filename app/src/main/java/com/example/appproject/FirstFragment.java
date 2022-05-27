@@ -54,5 +54,21 @@ public class FirstFragment extends Fragment {
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
         });
+        Button clear = view.findViewById(R.id.clearActivity);
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Global.activityNames.clear();
+                Global.descriptions.clear();
+                Global.times.clear();
+                Global.counting.clear();
+                Global.paused.clear();
+                Global.chronos.clear();
+                Global.savedTime.clear();
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_self);
+
+            }
+        });
     }
 }

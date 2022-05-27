@@ -73,25 +73,37 @@ public class MyListAdapter extends ArrayAdapter<String> {
                 if ((SystemClock.elapsedRealtime() - chronometer.getBase()) >= Global.times.get(position)*1000*60) {
                     chronometer.stop();
                     button.setText("Done!");
+                    paused.set(position,true);
+                    Global.savedTime.set(position, SystemClock.elapsedRealtime() - Global.pauseOffset.get(position));
+                    Global.done.set(position,true);
                     button.setBackgroundColor(ResourcesCompat.getColor(context.getResources(), R.color.buttonGreenB, null));
                     Toast.makeText(getContext(), activity.get(position)+" Finished!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
         showTime.setBase(Global.savedTime.get(position));
-        if(paused.get(position)==true){
-            button.setText("Stop");
-            showTime.start();
-        }else{
-            button.setText("Start");
-            paused.set(position,false);
+        if(Global.done.get(position)!=true) {
+
+            if ((SystemClock.elapsedRealtime() - showTime.getBase()) >= Global.times.get(position) * 1000 * 60) {
+                showTime.stop();
+                button.setText("Done!");
+            }
+            if (paused.get(position) == true) {
+                showTime.setBase(SystemClock.elapsedRealtime() - Global.pauseOffset.get(position));
+                button.setText("Start");
+
+            } else {
+                button.setText("Stop");
+                paused.set(position, false);
+                showTime.start();
+            }
         }
 
         button.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v) {
-                if (!button.getText().equals("Done!")) {
+                if (Global.done.get(position)!=true) {
                     if (paused.get(position) == false) {
                         button.setText("Start");
                         paused.set(position, true);
@@ -100,11 +112,16 @@ public class MyListAdapter extends ArrayAdapter<String> {
 
                     } else {
                         button.setText("Stop");
-                        showTime.start();
+
                         showTime.setBase(SystemClock.elapsedRealtime() - Global.pauseOffset.get(position));
+                        showTime.start();
                         Global.savedTime.set(position, SystemClock.elapsedRealtime() - Global.pauseOffset.get(position));
                         paused.set(position, false);
                     }
+                }else{
+                    button.setText("Done!");
+                    showTime.stop();
+
                 }
             }
         });
@@ -115,7 +132,7 @@ public class MyListAdapter extends ArrayAdapter<String> {
     public String toTimeString(int a){
         String c = Integer.toString(a/60);
         String b = Integer.toString(a%60);
-        if (b.length()==1) b=" "+b;
+        if (b.length()==1) b="0"+b;
 
         return ("/ "+c+":"+b+":00");
     }

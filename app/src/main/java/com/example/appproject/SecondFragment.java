@@ -45,6 +45,7 @@ public class SecondFragment extends Fragment {
                 Chronometer showTime = null;
                 Global.chronos.add(showTime);
                 Global.savedTime.add(SystemClock.elapsedRealtime());
+                Global.done.add(Boolean.FALSE);
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }
